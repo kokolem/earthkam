@@ -1,5 +1,4 @@
 # ZŠ Bílá Earthkam project
--Django version
 
 Django version of ZŠ Bílá Earthkam project.
 
