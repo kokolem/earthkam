@@ -1,4 +1,6 @@
-# earthkam
+# ZŠ Bílá Earthkam project
+-Django version
+
 Django version of ZŠ Bílá Earthkam project.
 
 .NET project here: https://earthkam.azurewebsites.net
