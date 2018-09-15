@@ -1,17 +1,7 @@
 <meta charset="UTF-8">
 
-<form action="/marker/" method="post">
-    <label for="name">Název: </label> <br>
-    <input id="name" type="text" placeholder="Zadejte název místa"> <br>
-    <label for="lat">Zeměpisná šířka: </label> <br>
-    <input id="lat" type="text" placeholder="Zadejte zeměpisnou šířku"> <br>
-    <label for="long">Zeměpisná délka: </label> <br>
-    <input id="long" type="text" placeholder="Zadejte zeměpisnou délku"> <br>
-    <label for="description">Popis: </label> <br>
-    <input id="description" type="text" placeholder="Zadejte krátký popis"> <br>
-    <label for="image_url">Obrázek: </label> <br>
-    <input id="image_url" type="text" placeholder="Zadejte URL adresu obrázku"> <br>
-    <label for="infocard_url">Infokarta </label> <br>
-    <input id="infocard_url" type="text" placeholder="Zadejte URL infokarty"> <br>
-    <input type="submit" value="OK"> <br>
+<form action="/admin/" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Uložit">
 </form>
