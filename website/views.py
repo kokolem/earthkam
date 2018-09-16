@@ -35,7 +35,7 @@ def marker(request, id):
             form = MarkerForm(request.POST)
             if form.is_valid():
                 form.save()
-                return HttpResponse('Nový bod byl vytvořen.')
+                return HttpResponseRedirect('/admin')
         else:
             form = MarkerForm()
     else:
@@ -45,7 +45,7 @@ def marker(request, id):
             form = MarkerForm(request.POST, instance=instance)
             if form.is_valid():
                 form.save()
-                return HttpResponse('Bod byl upraven.')
+                return HttpResponseRedirect('/admin')
 
         else:
             form = MarkerForm(instance=instance)
