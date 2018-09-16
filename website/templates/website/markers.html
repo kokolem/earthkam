@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Body</title>
+</head>
+<body>
+{% for marker in markers %}
+    <b>{{ marker.name }}</b>
+    <a href="/admin/marker/{{ marker.pk }}">upravit</a>
+    <br>
+{% endfor %}
+<br>
+<a href="/admin/marker/new">Nový bod</a>
+</body>
+</html>
