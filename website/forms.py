@@ -5,4 +5,4 @@ from .models import Marker
 class MarkerForm(forms.ModelForm):
     class Meta:
         model = Marker
-        fields = ['name', 'description', 'long', 'lat', 'image', 'infocard']
+        fields = "__all__"
