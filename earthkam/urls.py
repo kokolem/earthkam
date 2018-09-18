@@ -20,10 +20,12 @@ from website import views
 
 urlpatterns = [
     path('', views.index, name="index"),
+    path('o-projektu/', views.about, name="o-projektu"),
     path('accounts/', include('django.contrib.auth.urls')),
 
     path('admin/', views.admin, name="přihlášení"),
-    path('o-projektu/', views.about, name="o-projektu"),
     path('admin/markers', views.markers, name="administrace"),
-    path('admin/marker/<str:id>', views.marker, name="nový-bod"),
+    path('admin/marker/<str:id>/edit', views.markerEdit, name="upravení-bodu"),
+    path('admin/marker/<int:id>/info', views.markerInfo, name="informace-o-bodu"),
+    path('admin/marker/<int:id>/delete', views.markerDelete, name="smazání-bodu"),
 ]

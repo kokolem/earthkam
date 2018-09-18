@@ -6,18 +6,64 @@
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,300i,400,400i">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700">
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
-</head>
+    <script>
+        function initMap() {
+            let mapOptions = {
+                center: new google.maps.LatLng(0, 0),
+                zoom: 2,
+                mapTypeControl: false,
+                streetViewControl: false,
+                zoomControl: true,
+                fullscreenControl: false
+            };
+
+            let map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+            let infowindow = new google.maps.InfoWindow({
+                content: " "
+            });
+
+            {% for marker in markers %}
+                let myLatlng = new google.maps.LatLng({{ marker.lat }}, {{ marker.long }});
+                let marker = new google.maps.Marker({
+                    position: myLatlng,
+                    map: map,
+                    title: "{{ marker.name }}",
+                    img: "{{ marker.image }}",
+                    description: "{{ marker.description }}",
+                    infocard: "{{ marker.description }}"
+                });
+                google.maps.event.addListener(marker, 'click', function () {
+                    if (this.infocard != null) {
+                        infowindow.setContent(
+                            '<div id="mapCont"><img id="mapImg" src="' + this.img + '"/>' +
+                            '<div id="mapTitle">' + this.title + '</div>' +
+                            '<p id="mapDescription">' + this.description + '</p>' +
+                            '<p>Pro větší zobrazení klikněte <a href="' + this.img + '" id="button-zde">zde</a></p>' +
+                            '<p>Pro bližší informace klikněte <a href="' + this.infocard + '" id="button-zde">zde</a></p></div>');
+                    } else {
+                        infowindow.setContent(
+                            '<div id="mapCont"><img id="mapImg" src="' + this.img + '"/>' +
+                            '<div id="mapTitle">' + this.title + '</div>' +
+                            '<p id="mapDescription">' + this.description + '</p>' +
+                            '<p>Pro větší zobrazení klikněte <a href="' + this.img + '" id="button-zde">zde</a></p></div>');
+                    }
+                    infowindow.open(map, this);
+                });
+            {% endfor %}
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9hgSIyubqIOSOBRtqLd5ldZ9W01EzxBk&callback=initMap"
+            async defer></script>
 <body>
-    <div class="topmenu">
-        <a href="/"><h2 class="nadpis">EarthKAM</h2></a>
-        <a href="/admin" class="index-odkaz">Přihlásit</a>
-        <a href="/o-projektu" class="index-odkaz2">O Projektu</a>
-        <a href="http://www.zsbila.cz/1249-in-flight-call-with-paolo-nespoli" class="index-odkaz2">Volání do vesmíru</a>
-    </div>
-    <div class="map-box2">
-        <div class="map" id="map">Tady bude mapa...</div>
-    </div>
+<div class="topmenu">
+    <a href="/"><h2 class="nadpis">EarthKAM</h2></a>
+    <a href="/admin" class="index-odkaz">Přihlásit se</a>
+    <a href="/o-projektu" class="index-odkaz2">O Projektu</a>
+    <a href="http://www.zsbila.cz/1249-in-flight-call-with-paolo-nespoli" class="index-odkaz2">Volání do vesmíru</a>
+</div>
+<div class="map-box2">
+    <div class="map" id="map">Tady bude mapa...</div>
+</div>
 </body>
 </html>

@@ -1,0 +1,13 @@
+<meta charset="UTF-8">
+
+{% if id == "new" %}
+    <title>Přidání bodu</title>
+{% else %}
+    <title>Úprava bodu</title>
+{% endif %}
+
+<form action="/admin/marker/{{ id }}/edit" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Uložit">
+</form>

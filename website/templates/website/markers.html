@@ -2,15 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Body</title>
+    <title>Seznam bodů</title>
 </head>
 <body>
 {% for marker in markers %}
     <b>{{ marker.name }}</b>
-    <a href="/admin/marker/{{ marker.pk }}">upravit</a>
+    <a href="/admin/marker/{{ marker.pk }}/edit">upravit</a>
+    <a href="/admin/marker/{{ marker.pk }}/delete">smazat</a>
+    <a href="/admin/marker/{{ marker.pk }}/info">informace</a>
     <br>
 {% endfor %}
 <br>
-<a href="/admin/marker/new">Nový bod</a>
+<a href="/admin/marker/new/edit">Nový bod</a>
 </body>
 </html>

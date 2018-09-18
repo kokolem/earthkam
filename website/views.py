@@ -27,7 +27,7 @@ def markers(request):
 
 
 @login_required
-def marker(request, id):
+def markerEdit(request, id):
     # Formulář ná úpravu / vytvoření bodu
 
     if id == "new":
@@ -50,8 +50,23 @@ def marker(request, id):
         else:
             form = MarkerForm(instance=instance)
 
-    return render(request, 'website/marker.html', {'form': form, 'id': id})
+    return render(request, 'website/markerEdit.html', {'form': form, 'id': id})
 
+
+@login_required
+def markerInfo(request, id):
+    # Veškeré informace o bodu
+
+    map_marker = Marker.objects.get(pk=id)
+    return render(request, 'website/markerInfo.html', {'marker':map_marker})
+
+
+@login_required
+def markerDelete(request, id):
+    # Smazání bodu
+
+    Marker.objects.get(pk=id).delete()
+    return HttpResponseRedirect('/admin')
 
 @login_required
 def admin(request):

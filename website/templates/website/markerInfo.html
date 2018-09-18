@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Informace o bodu</title>
+</head>
+<body>
+<b>Název:</b> {{ marker.name }} <br>
+<b>Popis:</b> {{ marker.description }} <br>
+<b>Zeměpisná délka:</b> {{ marker.long }} <br>
+<b>Zeměpisná šířka:</b> {{ marker.lat }} <br>
+<b>URL adresa obrázku:</b> <a href="{{ marker.image }}">{{ marker.image }}</a> <br>
+<b>URL adresa infokarty:</b> <a href="{{ marker.infocard }}">{{ marker.infocard }}</a> <br>
+</body>
+</html>
