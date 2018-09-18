@@ -31,7 +31,7 @@
                     title: "{{ marker.name }}",
                     img: "{{ marker.image }}",
                     description: "{{ marker.description }}",
-                    infocard: "{{ marker.description }}"
+                    infocard: "{{ marker.infocard }}"
                 });
                 google.maps.event.addListener(marker, 'click', function () {
                     if (this.infocard != null) {
