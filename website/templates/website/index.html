@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,300i,400,400i">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700">
+    {% load l10n %}
     <script>
         function initMap() {
             let mapOptions = {
@@ -24,7 +25,7 @@
             });
 
             {% for marker in markers %}
-                let myLatlng = new google.maps.LatLng({{ marker.lat }}, {{ marker.long }});
+                let myLatlng = new google.maps.LatLng({{marker.lat|unlocalize}}, {{marker.long|unlocalize}});
                 let marker = new google.maps.Marker({
                     position: myLatlng,
                     map: map,
@@ -37,15 +38,13 @@
                     if (this.infocard != null) {
                         infowindow.setContent(
                             '<div id="mapCont"><img id="mapImg" src="' + this.img + '"/>' +
-                            '<div id="mapTitle">' + this.title + '</div>' +
-                            '<p id="mapDescription">' + this.description + '</p>' +
+                            '<div id="mapTitle">' + this.title + ' - ' + this.description + '</div>' +
                             '<p>Pro větší zobrazení klikněte <a href="' + this.img + '" id="button-zde">zde</a></p>' +
                             '<p>Pro bližší informace klikněte <a href="' + this.infocard + '" id="button-zde">zde</a></p></div>');
                     } else {
                         infowindow.setContent(
                             '<div id="mapCont"><img id="mapImg" src="' + this.img + '"/>' +
-                            '<div id="mapTitle">' + this.title + '</div>' +
-                            '<p id="mapDescription">' + this.description + '</p>' +
+                            '<div id="mapTitle">' + this.title + ' - ' + this.description + '</div>' +
                             '<p>Pro větší zobrazení klikněte <a href="' + this.img + '" id="button-zde">zde</a></p></div>');
                     }
                     infowindow.open(map, this);
@@ -63,7 +62,7 @@
     <a href="http://www.zsbila.cz/1249-in-flight-call-with-paolo-nespoli" class="index-odkaz2">Volání do vesmíru</a>
 </div>
 <div class="map-box2">
-    <div class="map" id="map">Tady bude mapa...</div>
+    <div class="map" id="map"></div>
 </div>
 </body>
 </html>

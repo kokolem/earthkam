@@ -14,8 +14,8 @@ def index(request):
 
 def about(request):
     # Stránka o projektu
-
-    return render(request, 'website/about.html')
+    map_markers_count = len(Marker.objects.all())
+    return render(request, 'website/about.html', {"markers_count": map_markers_count})
 
 
 @login_required
