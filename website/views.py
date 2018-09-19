@@ -1,6 +1,7 @@
-from django.shortcuts import render
-from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponseRedirect
+from django.shortcuts import render
+
 from .forms import MarkerForm
 from .models import Marker
 
@@ -58,7 +59,7 @@ def markerInfo(request, id):
     # Veškeré informace o bodu
 
     map_marker = Marker.objects.get(pk=id)
-    return render(request, 'website/markerInfo.html', {'marker':map_marker})
+    return render(request, 'website/markerInfo.html', {'marker': map_marker})
 
 
 @login_required
@@ -67,6 +68,7 @@ def markerDelete(request, id):
 
     Marker.objects.get(pk=id).delete()
     return HttpResponseRedirect('/admin')
+
 
 @login_required
 def admin(request):

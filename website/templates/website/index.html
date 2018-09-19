@@ -31,6 +31,7 @@
                     map: map,
                     title: "{{ marker.name }}",
                     img: "{{ marker.image }}",
+                    fullImg: "{{ marker.fullImage }}",
                     description: "{{ marker.description }}",
                     infocard: "{{ marker.infocard }}"
                 });
@@ -39,13 +40,13 @@
                         infowindow.setContent(
                             '<div id="mapCont"><img id="mapImg" src="' + this.img + '"/>' +
                             '<div id="mapTitle">' + this.title + ' - ' + this.description + '</div>' +
-                            '<p>Pro větší zobrazení klikněte <a href="' + this.img + '" id="button-zde">zde</a></p>' +
+                            '<p>Pro větší zobrazení klikněte <a href="' + this.fullImg + '" id="button-zde">zde</a></p>' +
                             '<p>Pro bližší informace klikněte <a href="' + this.infocard + '" id="button-zde">zde</a></p></div>');
                     } else {
                         infowindow.setContent(
                             '<div id="mapCont"><img id="mapImg" src="' + this.img + '"/>' +
                             '<div id="mapTitle">' + this.title + ' - ' + this.description + '</div>' +
-                            '<p>Pro větší zobrazení klikněte <a href="' + this.img + '" id="button-zde">zde</a></p></div>');
+                            '<p>Pro větší zobrazení klikněte <a href="' + this.fullImg + '" id="button-zde">zde</a></p></div>');
                     }
                     infowindow.open(map, this);
                 });
