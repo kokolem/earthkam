@@ -57,7 +57,7 @@
     font-weight: 400;
     color: #20323b;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 18px;
     text-transform: uppercase;
 }
 
@@ -69,7 +69,18 @@
     color: #20323b;
     text-align: center;
     word-spacing: 2px;
-    line-height: 33px;
+    line-height: 30px;
+}
+
+.popis2 {
+    text-decoration: none;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    color: #20323b;
+    text-align: center;
+    word-spacing: 2px;
+    line-height: 25px;
 }
 
 .autori {
@@ -89,7 +100,6 @@ strong {
 .zsbila-logo {
     width: 75px;
     height: auto;
-    margin-left: 36%;
     margin-top: 0px;
 }
 
@@ -104,4 +114,25 @@ strong {
     height: 20px;
     border: 1px solid #006080;
     padding: 12px 12px;
+}
+
+.zpet {
+    text-decoration: none;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    color: #006080;
+    text-align: center;
+    word-spacing: 2px;
+    border: 2px solid #006080;
+    padding: 9px 30px;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+.zpet:hover {
+    color: #fff;
+    background-color: #006080;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
 }
