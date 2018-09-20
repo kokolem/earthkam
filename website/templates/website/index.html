@@ -24,9 +24,10 @@
                 content: " "
             });
 
+            let myLatlng, marker;
             {% for marker in markers %}
-                let myLatlng = new google.maps.LatLng({{marker.lat|unlocalize}}, {{marker.long|unlocalize}});
-                let marker = new google.maps.Marker({
+                myLatlng = new google.maps.LatLng({{marker.lat|unlocalize}}, {{marker.long|unlocalize}});
+                marker = new google.maps.Marker({
                     position: myLatlng,
                     map: map,
                     title: "{{ marker.name }}",
@@ -53,7 +54,7 @@
             {% endfor %}
         }
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9hgSIyubqIOSOBRtqLd5ldZ9W01EzxBk&callback=initMap"
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAb7mFGeTZf45S7ziRQqAQsD5NX_U5aoUQ&callback=initMap"
             async defer></script>
 <body>
     <div class="topmenu">
