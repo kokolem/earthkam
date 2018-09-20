@@ -956,7 +956,7 @@ button:hover {
 
 .map-box2 {
     width: 100%;
-    height: calc(100% - 50px);
+    height: calc(100% - 55px);
     right: 0;
     position: absolute;
 }
