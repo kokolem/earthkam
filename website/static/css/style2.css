@@ -128,6 +128,7 @@ strong {
     padding: 9px 30px;
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
+    border-radius: 2px;
 }
 
 .zpet:hover {

@@ -956,7 +956,7 @@ button:hover {
 
 .map-box2 {
     width: 100%;
-    height: calc(100% - 50px);
+    height: calc(100% - 55px);
     right: 0;
     position: absolute;
 }
@@ -1008,8 +1008,14 @@ button:hover {
     font-family: 'Poppins', sans-serif;
     font-weight: 100;
     color: #fff;
-    padding: 5px;
+    padding: 0px 10px;
+    border: 1px solid #20323b;
+    border-radius: 2px;
+}
+
+#button-zde:hover {
     background-color: #20323b;
+    color: #ffffff;
 }
 
 /* End of Map */
