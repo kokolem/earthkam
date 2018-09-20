@@ -1010,6 +1010,7 @@ button:hover {
     color: #fff;
     padding: 7px 3px;
     border: 1px solid #20323b;
+    border-radius: 2px;
 }
 
 #button-zde:hover {
