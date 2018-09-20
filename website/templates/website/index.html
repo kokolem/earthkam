@@ -25,6 +25,7 @@
             });
 
             let myLatlng, marker;
+
             {% for marker in markers %}
                 myLatlng = new google.maps.LatLng({{marker.lat|unlocalize}}, {{marker.long|unlocalize}});
                 marker = new google.maps.Marker({
