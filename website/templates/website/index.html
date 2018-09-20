@@ -19,11 +19,9 @@
             };
 
             let map = new google.maps.Map(document.getElementById("map"), mapOptions);
-
             let infowindow = new google.maps.InfoWindow({
                 content: " "
             });
-
             let myLatlng, marker;
 
             {% for marker in markers %}
