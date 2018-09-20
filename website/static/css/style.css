@@ -1008,8 +1008,13 @@ button:hover {
     font-family: 'Poppins', sans-serif;
     font-weight: 100;
     color: #fff;
-    padding: 5px;
+    padding: 7px 3px;
+    border: 1px solid #20323b;
+}
+
+#button-zde:hover {
     background-color: #20323b;
+    color: #ffffff;
 }
 
 /* End of Map */
