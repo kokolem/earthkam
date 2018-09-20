@@ -1,3 +1,4 @@
+from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
@@ -75,3 +76,11 @@ def admin(request):
     # Stránka na přihlašování
 
     return HttpResponseRedirect('/admin/markers')
+
+
+@login_required
+def adminLogout(request):
+    # Stránka na odhlašování
+
+    logout(request)
+    return HttpResponseRedirect("/")
