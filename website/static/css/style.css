@@ -8,30 +8,6 @@ html, body {
 
 }
 
-@font-face {
-    font-family: Poppins-Regular;
-    src: url('../fonts/poppins/Poppins-Regular.ttf');
-}
-
-@font-face {
-    font-family: Poppins-Medium;
-    src: url('../fonts/poppins/Poppins-Medium.ttf');
-}
-
-@font-face {
-    font-family: Poppins-Bold;
-    src: url('../fonts/poppins/Poppins-Bold.ttf');
-}
-
-@font-face {
-    font-family: Poppins-SemiBold;
-    src: url('../fonts/poppins/Poppins-SemiBold.ttf');
-}
-
-/* Layout */
-
-/* Sidebar */
-
 .sidebar1 {
     background-color: #fff;
     position: fixed;
@@ -70,7 +46,7 @@ html, body {
     background-repeat: no-repeat;
     background-size: cover;
     padding: 70px 15px 74px 15px;
-    background-image: url("/images/earthfromspace.jpg");
+    background-image: url("/static/images/earthfromspace.jpg");
 }
 
 .sidebar1-title {
@@ -881,7 +857,6 @@ button:hover {
 }
 
 /* End of Table */
-
 
 /* Map */
 
