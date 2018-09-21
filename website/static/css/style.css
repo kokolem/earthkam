@@ -1006,16 +1006,21 @@ button:hover {
 #button-zde {
     font-size: 12px;
     font-family: 'Poppins', sans-serif;
-    font-weight: 100;
+    font-weight: 200;
     color: #20323b;
-    padding: 0px 10px;
+    padding: 5px 10px;
     border: 1px solid #20323b;
-    border-radius: 2px;
+    border-radius: 4px;
+    text-decoration: none;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
 }
 
 #button-zde:hover {
     background-color: #20323b;
     color: #ffffff;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
 }
 
 /* End of Map */
