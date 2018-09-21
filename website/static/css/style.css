@@ -1004,9 +1004,9 @@ button:hover {
 }
 
 #button-zde {
-    font-size: 12px;
+    font-size: 13px;
     font-family: 'Poppins', sans-serif;
-    font-weight: 200;
+    font-weight: 300;
     color: #20323b;
     padding: 5px 10px;
     border: 1px solid #20323b;
@@ -1014,6 +1014,7 @@ button:hover {
     text-decoration: none;
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
+    margin-top: 20px;
 }
 
 #button-zde:hover {
