@@ -979,18 +979,46 @@ button:hover {
 }
 
 #button-zde {
-    font-size: 12px;
+    font-size: 13px;
     font-family: 'Poppins', sans-serif;
-    font-weight: 100;
-    color: #fff;
-    padding: 0px 10px;
-    border: 1px solid #20323b;
+    font-weight: 300;
+    color: #006080;
+    padding: 5px 12px;
+    border: 1px solid #006080;
     border-radius: 2px;
+    text-decoration: none;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    margin-top: 50px;
 }
 
 #button-zde:hover {
     background-color: #20323b;
     color: #ffffff;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+#button-zde2 {
+    font-size: 13px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    color: #006080;
+    padding: 5px 12px;
+    border: 1px solid #006080;
+    border-radius: 2px;
+    text-decoration: none;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+#button-zde2:hover {
+    background-color: #20323b;
+    color: #ffffff;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
 }
 
 /* End of Map */
