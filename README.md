@@ -1,6 +1,10 @@
-# ZŠ Bílá Earthkam project
+# TODO:
 
-Django version of ZŠ Bílá Earthkam project.
+1. Opravit css přihlašovací stránky.
+2. Přidat design pro administraci.
+3. Udělat hlavní stránku responsivní. \\/ Nějak takhle. \\/
 
-.NET project here: https://earthkam.azurewebsites.net
-Django project right there...
+![Asi nějak takhle...](https://i.imgur.com/MZHFXku.png)
+
+4. Spojit style.css a style2.css.
+5. Smazat nepotřebné styly.
