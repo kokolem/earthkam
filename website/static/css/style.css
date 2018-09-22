@@ -7,6 +7,9 @@ html, body {
     word-spacing: 2px;
 
 }
+/* Layout */
+
+/* Sidebar */
 
 .sidebar1 {
     background-color: #fff;
@@ -43,9 +46,10 @@ html, body {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    background-repeat: no-repeat;
     background-size: cover;
     padding: 70px 15px 74px 15px;
-    background: url("/static/images/earthfromspace.jpg") no-repeat;
+    background-image: url("static/images/earthfromspace.jpg");
 }
 
 .sidebar1-title {
@@ -857,6 +861,7 @@ button:hover {
 
 /* End of Table */
 
+
 /* Map */
 
 .topmenu {
@@ -939,9 +944,18 @@ button:hover {
     height: 100%;
 }
 
+@media (min-resolution: 180dpi){ /*Tohle by tu nemělo být, správně by to mělo být přes viewport (tak to tak pls udělej ;)*/
+    .map {
+        width: 50%;
+        height: 50%;
+        transform: scale(2);
+        transform-origin: left top;
+    }
+}
+
 #mapCont {
     max-width: 300px;
-    max-height: 300px;
+    max-height: 375px;
 }
 
 #mapImg {
@@ -956,16 +970,18 @@ button:hover {
     color: #20323b;
     letter-spacing: 1px;
     margin-top: 2px;
+    padding-bottom: 0px;
+    text-align: center;
 }
 
 #mapDescription {
     font-size: 14px;
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
-    font-style: italic;
     color: #20323b;
     letter-spacing: 1px;
-    margin-top: 2px;
+    margin-top: 0px;
+    text-align: center;
 }
 
 #mapOdkaz {
@@ -978,44 +994,49 @@ button:hover {
 }
 
 #button-zde {
-    font-size: 13px;
     font-family: 'Poppins', sans-serif;
-    font-weight: 300;
     color: #006080;
-    padding: 5px 12px;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 300;
+    margin-left: 13px;
+    float: left;
+    margin-top: 5px;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
     border: 1px solid #006080;
     border-radius: 2px;
-    text-decoration: none;
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    margin-top: 50px;
-}
-
-#button-zde:hover {
-    background-color: #20323b;
-    color: #ffffff;
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
 }
 
 #button-zde2 {
-    font-size: 13px;
     font-family: 'Poppins', sans-serif;
-    font-weight: 300;
     color: #006080;
-    padding: 5px 12px;
-    border: 1px solid #006080;
-    border-radius: 2px;
+    padding: 5px 10px;
+    text-align: center;
     text-decoration: none;
+    font-size: 14px;
+    font-weight: 300;
+    float: right;
+    margin-top: 5px;
+    margin-right: 13px;
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
-    margin-top: 50px;
-    margin-left: 50px;
+    border: 1px solid #006080;
+    border-radius: 2px;
+}
+
+#button-zde:hover {
+    color: #fff;
+    background-color: #006080;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
 }
 
 #button-zde2:hover {
-    background-color: #20323b;
-    color: #ffffff;
+    color: #fff;
+    background-color: #006080;
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
 }

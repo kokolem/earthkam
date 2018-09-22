@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>ZŠ Bílá - Earthkam</title>
+    <title>ZŠ Bílá - Earthkam</title
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,300i,400,400i">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
     {% load l10n %}
     <script>
         function initMap() {
@@ -17,13 +19,11 @@
                 zoomControl: true,
                 fullscreenControl: false
             };
-
             let map = new google.maps.Map(document.getElementById("map"), mapOptions);
             let infowindow = new google.maps.InfoWindow({
                 content: " "
             });
             let myLatlng, marker;
-
             {% for marker in markers %}
                 myLatlng = new google.maps.LatLng({{marker.lat|unlocalize}}, {{marker.long|unlocalize}});
                 marker = new google.maps.Marker({
@@ -39,14 +39,15 @@
                     if (this.infocard != null) {
                         infowindow.setContent(
                             '<div id="mapCont"><img id="mapImg" src="' + this.img + '"/>' +
-                            '<div id="mapTitle">' + this.title + ' - ' + this.description + '</div>' +
-                            '<a href="' + this.fullImg + '" id="button-zde">Větší zobrazení</a>' +
-                            '<a href="' + this.infocard + '" id="button-zde2">Bližší informace</a></div>');
+                            '<div id="mapTitle">' + this.title + '</div>' +
+                            '<div id="mapDescription">' + this.description + '</div>' +
+                            '<a href="' + this.fullImg + '" id="button-zde" target="_blank">Větší zobrazení</a>' +
+                            '<a href="' + this.infocard + '" id="button-zde2" target="_blank">Bližší informace</a></div>');
                     } else {
                         infowindow.setContent(
                             '<div id="mapCont"><img id="mapImg" src="' + this.img + '"/>' +
                             '<div id="mapTitle">' + this.title + ' - ' + this.description + '</div>' +
-                            '<a href="' + this.fullImg + '" id="button-zde">Větší zobrazení</a></div>');
+                            '<a href="' + this.fullImg + '" id="button-zde" target="_blank">Větší zobrazení</a></div>');
                     }
                     infowindow.open(map, this);
                 });
@@ -55,18 +56,16 @@
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAb7mFGeTZf45S7ziRQqAQsD5NX_U5aoUQ&callback=initMap"
             async defer></script>
-</head>
 <body>
+    <div class="topmenu">
+        <a href="http://earthkam.org" target="_blank"><h2 class="nadpis">EarthKAM</h2></a>
+        <a href="/admin" class="index-odkaz">Přihlásit se</a>
+        <a href="/o-projektu" class="index-odkaz2" >O projektu</a>
+        <a href="http://www.zsbila.cz/1249-in-flight-call-with-paolo-nespoli" class="index-odkaz2" target="_blank">Volání do vesmíru</a>
+    </div>
 
-<div class="topmenu">
-    <a href="http://earthkam.org"><h2 class="nadpis">EarthKAM</h2></a>
-    <a href="/admin" class="index-odkaz">Přihlásit se</a>
-    <a href="/o-projektu" class="index-odkaz2">O projektu</a>
-    <a href="http://www.zsbila.cz/1249-in-flight-call-with-paolo-nespoli" class="index-odkaz2">Volání do vesmíru</a>
-</div>
-
-<div class="map-box2">
-    <div class="map" id="map"></div>
-</div>
+    <div class="map-box2">
+        <div class="map" id="map"></div>
+    </div>
 </body>
 </html>

@@ -11,7 +11,7 @@
 }
 
 .index-odkaz {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: #20323b;
     padding: 8px 12px;
     text-align: center;
@@ -26,7 +26,7 @@
 }
 
 .index-odkaz2 {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: #20323b;
     padding: 8px 12px;
     text-align: center;
@@ -40,7 +40,7 @@
     transition-duration: 0.3s;
 }
 .nadpis2 {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: #20323b;
     text-decoration: none;
     font-size: 25px;
@@ -53,7 +53,7 @@
 .nadpis {
     text-decoration: none;
     font-size: 32px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     color: #20323b;
     text-align: center;
@@ -64,7 +64,7 @@
 .popis {
     text-decoration: none;
     font-size: 17px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 200;
     color: #20323b;
     text-align: center;
@@ -75,7 +75,7 @@
 .popis2 {
     text-decoration: none;
     font-size: 17px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 200;
     color: #20323b;
     text-align: center;
@@ -86,16 +86,12 @@
 .autori {
     text-decoration: none;
     font-size: 15px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 300;
     color: #20323b;
     text-align: center;
 }
 
-strong {
-    font-weight: 500;
-    font-size: 17px;
-}
 
 .zsbila-logo {
     width: 75px;
