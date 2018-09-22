@@ -6,5 +6,6 @@
 
 ![Asi nějak takhle...](https://i.imgur.com/MZHFXku.png)
 
-4. Spojit style.css a style2.css.
-5. Smazat nepotřebné styly.
+4. Zvětšení mapy na mobilu nedělat přes @media (style.css řádka 947), ale přes viewport.
+5. Spojit style.css a style2.css.
+6. Smazat nepotřebné styly.
