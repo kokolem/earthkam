@@ -27,20 +27,25 @@
                 {{ marker.description }}
             </dd>
             <hr/>
-            <p class="info-text">Adresa URL obrázku:</p>
+            <p class="info-text">URL adresa obrázku 752x482:</p>
             <dd class="dd-text">
                 <a href="{{ marker.image }}">{{ marker.image }}</a>
             </dd>
             <hr/>
-            <p class="info-text">Adresa URL infokarty:</p>
+            <p class="info-text">URL adresa obrázku 4312x2868:</p>
+            <dd class="dd-text">
+                <a href="{{ marker.fullImage }}">{{ marker.fullImage }}</a>
+            </dd>
+            <hr/>
+            <p class="info-text">URL adresa infokarty:</p>
             <dd class="dd-text">
                 <a href="{{ marker.infocard }}">{{ marker.infocard }}</a>
             </dd>
         </dl>
     </div>
     <div>
-        <a href="/admin/marker/{{ marker.pk }}/edit" class="forgot-link2">Upravit </a>|
-        <a href="/admin/markers" class="forgot-link3"> Zpět na seznam</a>
+        <a href="/admin/marker/{{ marker.pk }}/edit" class="forgot-link2">Upravit&nbsp;</a>
+        <a href="/admin/markers" class="forgot-link3">|&nbsp;Zpět na seznam</a>
     </div>
 {% endblock %}
 
