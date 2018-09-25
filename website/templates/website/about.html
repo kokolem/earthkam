@@ -1,10 +1,11 @@
 {% extends "website/base.html" %}
 
-{% block title %}O projektu{% endblock %}
+
 
 {% block head %}
-    <link rel="stylesheet" href="/static/css/style2.css">
+    <link rel="stylesheet" href="/static/css/style3.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700" rel="stylesheet">
+    <title>O projektu</title>
 {% endblock %}
 
 {% block content_unauth %}
@@ -12,13 +13,12 @@
     {% block content_auth %}
 
         <div align="center" style="padding-top:30px;">
-            <a href="http://www.zsbila.cz" target="_blank"><img class="zsbila-logo"
-                                                                src="/static/images/zsbila-logo.jpg"/></a>
-            <a href="https://earthkam.org" target="_blank"><img class="earthkam-logo"
-                                                                src="/static/images/earthkam-logo.jpg"/></a>
+            <a href="http://www.zsbila.cz" target="_blank"><img class="zsbila-logo" src="/static/images/zsbila-logo.jpg"/></a>
+            <a href="https://earthkam.org" target="_blank"><img class="earthkam-logo" src="/static/images/earthkam-logo.jpg"/></a>
         </div>
+        <br>
 
-        <h1 class="nadpis">O Projektu</h1>
+        <p class="popis3">O Projektu</p>
 
         <p class="popis">
             V únoru se nám naskytla příležitost nechat si udělat fotky naší planety z vesmíru,<br/>
@@ -58,7 +58,3 @@
     </div>
 
 {% endblock %}
-
-
-
-
