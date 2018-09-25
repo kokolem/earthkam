@@ -920,16 +920,6 @@ button:hover {
     height: 100%;
 }
 
-@media (min-resolution: 180dpi){ /*Tohle by tu nemělo být, správně by to mělo být přes viewport (tak to tak pls udělej ;)*/
-    .map {
-        width: 50%;
-        height: 50%;
-        transform: scale(2);
-        transform-origin: left top;
-    }
-}
-/*Dělá to to, že na mobilu to zvětší ovládací prvky google map, protože jsou jinak moc malé. Ale to by se mělo dít samo, pokud je správně nastavený viewport.*/
-
 #mapCont {
     max-width: 300px;
     max-height: 375px;

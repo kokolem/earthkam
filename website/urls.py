@@ -11,4 +11,5 @@ urlpatterns = [
     path('admin/marker/<str:id>/edit', views.markerEdit, name="upravení-bodu"),
     path('admin/marker/<int:id>/info', views.markerInfo, name="informace-o-bodu"),
     path('admin/marker/<int:id>/delete', views.markerDelete, name="smazání-bodu"),
+    path('admin/adminmap', views.adminMap, name="admin-map"),
 ]

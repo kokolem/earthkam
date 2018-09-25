@@ -21,6 +21,14 @@ def about(request):
 
 
 @login_required
+def adminMap(request):
+    # Hlavní stránka
+
+    map_markers = Marker.objects.all()
+    return render(request, 'website/adminMap.html', {"markers": map_markers})
+
+
+@login_required
 def markers(request):
     # Hlavní admin stránka - vypsané body
 
