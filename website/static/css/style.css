@@ -43,10 +43,9 @@ html, body {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    background-repeat: no-repeat;
     background-size: cover;
     padding: 70px 15px 74px 15px;
-    background-image: url(/static/images/earthfromspace.jpg);
+    background: url("/static/images/earthfromspace.jpg") no-repeat;
 }
 
 .sidebar1-title {
