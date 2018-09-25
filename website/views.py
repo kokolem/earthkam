@@ -16,8 +16,16 @@ def index(request):
 
 def about(request):
     # Stránka o projektu
+
     markers_count = len(Marker.objects.all())
     return render(request, 'website/about.html', {"markers_count": markers_count})
+
+
+def about2(request):
+    # Stránka o projektu
+
+    markers_count = len(Marker.objects.all())
+    return render(request, 'website/about2.html', {"markers_count": markers_count})
 
 
 @login_required
