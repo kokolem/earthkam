@@ -1,7 +1,7 @@
 # TODO:
 
 1. Opravit css přihlašovací stránky.
-2. Přidat design pro administraci.
+2. Přidat design u úpravy bodu.
 3. Udělat hlavní stránku responsivní. \\/ Nějak takhle. \\/
 
 ![Asi nějak takhle...](https://i.imgur.com/MZHFXku.png)
