@@ -5,7 +5,7 @@ from website import views
 urlpatterns = [
     path('', views.index, name="hlavní-stránka"),
     path('o-projektu/', views.about, name="o-projektu"),
-    path('admin/', views.admin_map, name="administrace"),
+    path('admin/', views.admin, name="přihlášení"),
     path('admin/logout', views.admin_logout, name="odhlášení"),
     path('admin/markers', views.admin_marker_list, name="seznam-bodů"),
     path('admin/marker/<str:id>/edit', views.admin_marker_edit, name="úprava-a-vytvoření-bodu"),

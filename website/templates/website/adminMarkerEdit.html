@@ -1,15 +1,18 @@
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% extends "website/base.html" %}
 
+{% block title %}
+    {% if id == "new" %}
+        Přidání bodu
+    {% else %}
+        Úprava bodu
+    {% endif %}
+{% endblock %}
 
-{% if id == "new" %}
-    <title>Přidání bodu</title>
-{% else %}
-    <title>Úprava bodu</title>
-{% endif %}
+{% block content_auth %}
+    <form action="/admin/marker/{{ id }}/edit" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Uložit">
+    </form>
+{% endblock %}
 
-<form action="/admin/marker/{{ id }}/edit" method="post">
-    {% csrf_token %}
-    {{ form }}
-    <input type="submit" value="Uložit">
-</form>

@@ -68,15 +68,15 @@ def admin_marker_delete(request, id):
     # Smazání bodu
 
     Marker.objects.get(pk=id).delete()
-    return HttpResponseRedirect('/admin')
+    return HttpResponseRedirect('/admin/markers')
 
 
 @login_required
-def admin_map(request):
-    # Mapa pro přihlášené
+def admin(request):
+    # Stránka pro přihlášení
 
     map_markers = Marker.objects.all()
-    return render(request, 'website/adminMap.html', {"markers": map_markers})
+    return HttpResponseRedirect("/")
 
 
 @login_required
