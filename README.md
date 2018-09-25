@@ -7,7 +7,6 @@
 ![Asi nějak takhle...](https://i.imgur.com/MZHFXku.png)
 
 4. Vymyslet a přidat favicon. (Časem možná něco s tou katedrou geoinformatiky.)
-5. Zvětšení mapy na mobilu nedělat přes @media (style.css řádka 947), ale přes viewport.
-6. Spojit style.css a style2.css.
-7. Smazat nepotřebné styly. (Vendor?)
-8. Opravit posouvání Informace-Upravit-Smazat v /admin/markers
+5. Spojit style.css a style2.css.
+6. Smazat nepotřebné styly. (Vendor?)
+7. Opravit posouvání Informace-Upravit-Smazat v /admin/markers
