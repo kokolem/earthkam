@@ -27,14 +27,6 @@
                 EarthKAM
             </span>
             </div>
-            <div class="sidebar1-userbox">
-                <div class="sidebar1-userbox-inner">
-                    <span class="sidebar1-username1">Uživatel</span>
-                </div>
-                <div class="sidebar1-userbox-inner">
-                    <a class="sidebar1-username2">admin</a>
-                </div>
-            </div>
             <div class="sidebar2">
                 <ul>
                     <li>
@@ -47,7 +39,7 @@
                         <a href="/o-projektu">O Projektu</a>
                     </li>
                     <li>
-                        <a href="/admin/logout">Odhlásit</a>
+                        <a href="/admin/logout">Odhlásit se</a>
                     </li>
                 </ul>
                 <a href="http://www.zsbila.cz"><img class="zsbila-logo" src="/static/images/zsbila-logo.jpg"/></a>
@@ -59,7 +51,7 @@
 
 {% if user.is_authenticated %}
     <div class="render-body">
-    {% block content_auth %} {% endblock %}
+        {% block content_auth %} {% endblock %}
     </div>
 {% else %}
     {% block content_unauth %} {% endblock %}
