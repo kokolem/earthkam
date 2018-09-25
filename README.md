@@ -9,6 +9,5 @@
 4. Vymyslet a přidat favicon. (Časem možná něco s tou katedrou geoinformatiky.)
 5. Zvětšení mapy na mobilu nedělat přes @media (style.css řádka 947), ale přes viewport.
 6. Spojit style.css a style2.css.
-7. Smazat nepotřebné styly.
-8. Udělat novou stránku admin-map.
-9. V té administraci nefunguje logout.
+7. Smazat nepotřebné styly. (Vendor?)
+8. Opravit posouvání Informace-Upravit-Smazat v /admin/markers
