@@ -1,13 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>ZŠ Bílá - EarthKAM</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/css/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,300i,400,400i">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700">
-    <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/vendor/animate/animate.css">
+    <link rel="stylesheet" type="text/css" href="/static/vendor/css-hamburgers/hamburgers.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/vendor/animsition/css/animsition.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/vendor/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/vendor/daterangepicker/daterangepicker.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700" rel="stylesheet">
+    <meta charset="UTF-8">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAb7mFGeTZf45S7ziRQqAQsD5NX_U5aoUQ&callback=initMap" async defer></script>
+    <title>Informace o bodu</title>
     {% load l10n %}
     <script>
         function initMap() {
@@ -54,20 +59,46 @@
             {% endfor %}
         }
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAb7mFGeTZf45S7ziRQqAQsD5NX_U5aoUQ&callback=initMap"
-            async defer></script>
-
 </head>
 <body>
-    <div class="topmenu">
-        <a href="http://earthkam.org" target="_blank"><h2 class="nadpis">EarthKAM</h2></a>
-        <a href="/admin" class="index-odkaz">Přihlásit se</a>
-        <a href="/o-projektu" class="index-odkaz2" >O projektu</a>
-        <a href="http://www.zsbila.cz/1249-in-flight-call-with-paolo-nespoli" class="index-odkaz2" target="_blank">Volání do vesmíru</a>
+<div class="sidebar1">
+    <div class="sidebar1-header">
+        <div class="sidebar1-titlebox">
+            <span class="sidebar1-title">
+                EarthKAM
+            </span>
+        </div>
+        <div class="sidebar1-userbox">
+            <div class="sidebar1-userbox-inner">
+                <span class="sidebar1-username1">Uživatel</span>
+            </div>
+            <div class="sidebar1-userbox-inner">
+                <a class="sidebar1-username2">admin</a>
+            </div>
+        </div>
+        <div class="sidebar2">
+            <ul>
+                <li>
+                    <a href="/admin/adminmap">Mapa</a>
+                </li>
+                <li>
+                    <a href="/admin/markers">Zeměpisné body</a>
+                </li>
+                <li>
+                    <a href="/o-projektu">O Projektu</a>
+                </li>
+                <li>
+                    <a href="/admin/logout">Odhlásit</a>
+                </li>
+            </ul>
+            <a href="http://www.zsbila.cz"><img class="zsbila-logo" src="/static/images/zsbila-logo.jpg" /></a>
+            <a href="https://earthkam.org"><img class="earthkam-logo" src="/static/images/earthkam-logo.jpg" /></a>
+        </div>
     </div>
+</div>
 
-    <div class="map-box2">
-        <div class="map" id="map"></div>
-    </div>
-</body>
-</html>
+<div class="render-body">
+  <div class="map-box">
+      <div class="map" id="map"></div>
+  </div>
+</div>

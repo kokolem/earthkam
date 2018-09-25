@@ -1,21 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/static/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/vendor/animate/animate.css">
+    <link rel="stylesheet" type="text/css" href="/static/vendor/css-hamburgers/hamburgers.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/vendor/animsition/css/animsition.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/vendor/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/vendor/daterangepicker/daterangepicker.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700" rel="stylesheet">
     <title>Seznam bodů</title>
 </head>
+
 <body>
-{% for marker in markers %}
-    <b>{{ marker.name }}</b>
-    <a href="/admin/marker/{{ marker.pk }}/edit">upravit</a>
-    <a href="/admin/marker/{{ marker.pk }}/delete">smazat</a>
-    <a href="/admin/marker/{{ marker.pk }}/info">informace</a>
-    <br>
-{% endfor %}
-<br>
-<a href="/admin/marker/new/edit">nový bod</a>
-<a href="/">zpět na mapu</a>
-<a href="/admin/logout">odhlásit se</a>
+    <div class="sidebar1">
+        <div class="sidebar1-header">
+            <div class="sidebar1-titlebox">
+                <span class="sidebar1-title">
+                    EarthKAM
+                </span>
+            </div>
+            <div class="sidebar1-userbox">
+                <div class="sidebar1-userbox-inner">
+                    <span class="sidebar1-username1">Uživatel</span>
+                </div>
+                <div class="sidebar1-userbox-inner">
+                    <a class="sidebar1-username2">admin</a>
+                </div>
+            </div>
+            <div class="sidebar2">
+                <ul>
+                    <li>
+                        <a href="/admin/adminmap">Mapa</a>
+                    </li>
+                    <li>
+                        <a href="markers">Zeměpisné body</a>
+                    </li>
+                    <li>
+                        <a href="/o-projektu">O Projektu</a>
+                    </li>
+                    <li>
+                        <a href="/admin/logout">Odhlásit</a>
+                    </li>
+                </ul>
+                <a href="http://www.zsbila.cz"><img class="zsbila-logo" src="/static/images/zsbila-logo.jpg" /></a>
+                <a href="https://earthkam.org"><img class="earthkam-logo" src="/static/images/earthkam-logo.jpg" /></a>
+            </div>
+        </div>
+    </div>
+
+
+<div class="render-body">
+  <div class="table-out">
+      <div class="table-header">
+          <a href="/admin/marker/new/edit" class="create-btn">Vytvořit nový bod</a>
+      </div>
+      {% for marker in markers %}
+      <div class="table-in">
+          <div class="table-img-1">
+              <img src="{{ marker.image }}" class="table-img" />
+          </div>
+          <div class="table-text-1">
+              <span class="title">{{ marker.name }}</span><br />
+              <span class="description">{{ marker.description }}</span><br />
+          </div>
+          <div class="table-text-2">
+              <span class="lat">Zeměpisná šířka: &nbsp;{{ marker.lat }}</span><br />
+              <span class="lng">Zeměpisná délka: &nbsp;{{ marker.long }}</span>
+          </div>
+          <div class="table-control">
+              <a href="/admin/marker/{{ marker.pk }}/delete" class="table-control2">Smazat</a><br />
+              <a href="/admin/marker/{{ marker.pk }}/edit" class="table-control2">Upravit</a><br />
+              <a href="/admin/marker/{{ marker.pk }}/info" class="table-control2">Informace</a>
+          </div>
+      </div>
+      {% endfor %}
+  </div>
+</div>
+
 </body>
 </html>

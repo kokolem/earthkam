@@ -2,15 +2,94 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/static/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/vendor/animate/animate.css">
+    <link rel="stylesheet" type="text/css" href="/static/vendor/css-hamburgers/hamburgers.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/vendor/animsition/css/animsition.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/vendor/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/vendor/daterangepicker/daterangepicker.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700" rel="stylesheet">
     <meta charset="UTF-8">
     <title>Informace o bodu</title>
 </head>
 <body>
-<b>Název:</b> {{ marker.name }} <br>
-<b>Popis:</b> {{ marker.description }} <br>
-<b>Zeměpisná délka:</b> {{ marker.long }} <br>
-<b>Zeměpisná šířka:</b> {{ marker.lat }} <br>
-<b>URL adresa obrázku:</b> <a href="{{ marker.image }}">{{ marker.image }}</a> <br>
-<b>URL adresa infokarty:</b> <a href="{{ marker.infocard }}">{{ marker.infocard }}</a> <br>
+<div class="sidebar1">
+    <div class="sidebar1-header">
+        <div class="sidebar1-titlebox">
+            <span class="sidebar1-title">
+                EarthKAM
+            </span>
+        </div>
+        <div class="sidebar1-userbox">
+            <div class="sidebar1-userbox-inner">
+                <span class="sidebar1-username1">Uživatel</span>
+            </div>
+            <div class="sidebar1-userbox-inner">
+                <a class="sidebar1-username2">admin</a>
+            </div>
+        </div>
+        <div class="sidebar2">
+            <ul>
+                <li>
+                    <a href="/admin/adminmap">Mapa</a>
+                </li>
+                <li>
+                    <a href="/admin/markers">Zeměpisné body</a>
+                </li>
+                <li>
+                    <a href="/o-projektu">O Projektu</a>
+                </li>
+                <li>
+                    <a href="/admin/logout">Odhlásit</a>
+                </li>
+            </ul>
+            <a href="http://www.zsbila.cz"><img class="zsbila-logo" src="/static/images/zsbila-logo.jpg" /></a>
+            <a href="https://earthkam.org"><img class="earthkam-logo" src="/static/images/earthkam-logo.jpg" /></a>
+        </div>
+    </div>
+</div>
+
+<div class="render-body">
+  <h2 class="h3-actions">Informace</h2>
+  <div>
+      <hr />
+      <dl class="dl-horizontal" id="delete">
+          <p class="info-text">Název:</p>
+          <dd class="dd-text">
+              {{ marker.name }}
+          </dd>
+          <hr />
+          <p class="info-text">Zeměpisná šířka:</p>
+          <dd class="dd-text">
+              {{ marker.lat }}
+          </dd>
+          <hr />
+          <p class="info-text">Zeměpisná délka:</p>
+          <dd class="dd-text">
+              {{ marker.long }}
+          </dd>
+          <hr />
+          <p class="info-text">Popis:</p>
+          <dd class="dd-text">
+              {{ marker.description }}
+          </dd>
+          <hr />
+          <p class="info-text">Adresa URL obrázku:</p>
+          <dd class="dd-text">
+              <a href="{{ marker.image }}">{{ marker.image }}</a>
+          </dd>
+          <hr />
+          <p class="info-text">Adresa URL infokarty:</p>
+          <dd class="dd-text">
+              <a href="{{ marker.infocard }}">{{ marker.infocard }}</a>
+          </dd>
+      </dl>
+  </div>
+  <div>
+      <a href="/admin/marker/{{ marker.pk }}/edit" class="forgot-link2">Edit&nbsp</a>
+      <a href="/admin/markers" class="forgot-link3">| &nbspZpět na seznam</a>
+  </div>
+</div>
 </body>
 </html>

@@ -32,9 +32,6 @@ html, body {
     position: absolute;
 }
 
-.sidebar1-header {
-}
-
 .sidebar1-titlebox {
     max-width: 100%;
     height: 23%;
@@ -49,7 +46,7 @@ html, body {
     background-repeat: no-repeat;
     background-size: cover;
     padding: 70px 15px 74px 15px;
-    background-image: url("static/images/earthfromspace.jpg");
+    background-image: url(/static/images/earthfromspace.jpg);
 }
 
 .sidebar1-title {
@@ -140,27 +137,6 @@ html, body {
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
     color: #006080;
-}
-
-.sidebar2 .logout-btn {
-    background-color: #fff;
-    font-family: 'Poppins', sans-serif;
-    border: none;
-    color: #20323b;
-    padding: 12px 12px;
-    text-align: center;
-    text-decoration: none;
-    display: block;
-    font-size: 18px;
-    font-weight: 300;
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    cursor: pointer;
-}
-
-.sidebar2 .logout-btn:hover {
-    color: #006080;
-    margin-left: 20px;
 }
 
 .sidebar2 .zsbila-logo {
@@ -943,16 +919,6 @@ button:hover {
 .map {
     height: 100%;
 }
-
-@media (min-resolution: 180dpi){ /*Tohle by tu nemělo být, správně by to mělo být přes viewport (tak to tak pls udělej ;)*/
-    .map {
-        width: 50%;
-        height: 50%;
-        transform: scale(2);
-        transform-origin: left top;
-    }
-}
-/*Dělá to to, že na mobilu to zvětší ovládací prvky google map, protože jsou jinak moc malé. Ale to by se mělo dít samo, pokud je správně nastavený viewport.*/
 
 #mapCont {
     max-width: 300px;
