@@ -1,11 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/static/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/vendor/animate/animate.css">
+    <link rel="stylesheet" type="text/css" href="/static/vendor/css-hamburgers/hamburgers.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/vendor/animsition/css/animsition.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/vendor/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/vendor/daterangepicker/daterangepicker.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700" rel="stylesheet">
     <meta charset="UTF-8">
-    <title>ZŠ Bílá - EarthKAM</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAb7mFGeTZf45S7ziRQqAQsD5NX_U5aoUQ&callback=initMap" async defer></script>
+    <title>Informace o bodu</title>
+    {% load l10n %}
+    <script>
+        function initMap() {
+            let mapOptions = {
+                center: new google.maps.LatLng(0, 0),
+                zoom: 2,
+                mapTypeControl: false,
+                streetViewControl: false,
+                zoomControl: true,
+                fullscreenControl: false
+            };
+            let map = new google.maps.Map(document.getElementById("map"), mapOptions);
+            let infowindow = new google.maps.InfoWindow({
+                content: " "
+            });
+            let myLatlng, marker;
+            {% for marker in markers %}
+                myLatlng = new google.maps.LatLng({{marker.lat|unlocalize}}, {{marker.long|unlocalize}});
+                marker = new google.maps.Marker({
+                    position: myLatlng,
+                    map: map,
+                    title: "{{ marker.name }}",
+                    img: "{{ marker.image }}",
+                    fullImg: "{{ marker.fullImage }}",
+                    description: "{{ marker.description }}",
+                    infocard: "{{ marker.infocard }}"
+                });
+                google.maps.event.addListener(marker, 'click', function () {
+                    if (this.infocard != null) {
+                        infowindow.setContent(
+                            '<div id="mapCont"><img id="mapImg" src="' + this.img + '"/>' +
+                            '<div id="mapTitle">' + this.title + '</div>' +
+                            '<div id="mapDescription">' + this.description + '</div>' +
+                            '<a href="' + this.fullImg + '" id="button-zde" target="_blank">Větší zobrazení</a>' +
+                            '<a href="' + this.infocard + '" id="button-zde2" target="_blank">Bližší informace</a></div>');
+                    } else {
+                        infowindow.setContent(
+                            '<div id="mapCont"><img id="mapImg" src="' + this.img + '"/>' +
+                            '<div id="mapTitle">' + this.title + ' - ' + this.description + '</div>' +
+                            '<a href="' + this.fullImg + '" id="button-zde" target="_blank">Větší zobrazení</a></div>');
+                    }
+                    infowindow.open(map, this);
+                });
+            {% endfor %}
+        }
+    </script>
 </head>
 <body>
-Sem si dej mapu pro přihlášený. <br>
-(Seznam bodů <a href="/admin/markers">zde</a>.)
-</body>
-</html>
+<div class="sidebar1">
+    <div class="sidebar1-header">
+        <div class="sidebar1-titlebox">
+            <span class="sidebar1-title">
+                EarthKAM
+            </span>
+        </div>
+        <div class="sidebar1-userbox">
+            <div class="sidebar1-userbox-inner">
+                <span class="sidebar1-username1">Uživatel</span>
+            </div>
+            <div class="sidebar1-userbox-inner">
+                <a class="sidebar1-username2">admin</a>
+            </div>
+        </div>
+        <div class="sidebar2">
+            <ul>
+                <li>
+                    <a href="/admin/adminmap">Mapa</a>
+                </li>
+                <li>
+                    <a href="/admin/markers">Zeměpisné body</a>
+                </li>
+                <li>
+                    <a href="/o-projektu">O Projektu</a>
+                </li>
+                <li>
+                    <a href="/admin/logout">Odhlásit</a>
+                </li>
+            </ul>
+            <a href="http://www.zsbila.cz"><img class="zsbila-logo" src="/static/images/zsbila-logo.jpg" /></a>
+            <a href="https://earthkam.org"><img class="earthkam-logo" src="/static/images/earthkam-logo.jpg" /></a>
+        </div>
+    </div>
+</div>
+
+<div class="render-body">
+  <div class="map-box">
+      <div class="map" id="map"></div>
+  </div>
+</div>
