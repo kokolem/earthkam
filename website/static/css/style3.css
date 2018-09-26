@@ -2,13 +2,14 @@ html, body {
     padding: 0;
     margin: 0;
     background-color: #fff;
+    font-family: 'Roboto', sans-serif;
 }
 
 .popis {
     text-decoration: none;
     font-size: 17px;
     font-family: 'Roboto', sans-serif;
-    font-weight: 200;
+    font-weight: 300;
     color: #20323b;
     text-align: center;
     word-spacing: 2px;
@@ -19,7 +20,7 @@ html, body {
     text-decoration: none;
     font-size: 17px;
     font-family: 'Roboto', sans-serif;
-    font-weight: 200;
+    font-weight: 300;
     color: #20323b;
     text-align: center;
     word-spacing: 2px;
@@ -29,7 +30,7 @@ html, body {
 .popis3 {
     text-decoration: none;
     font-size: 32px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 300;
     color: #20323b;
     text-align: center;
@@ -51,21 +52,20 @@ html, body {
 
 
 .zsbila-logo {
-    width: 75px;
+    width: 87px;
     height: auto;
     margin-top: 0px;
 }
 
 .earthkam-logo {
-    width: auto;
-    height: 75px;
-    margin-top: -15px;
+    width: 75px;
+    height: auto;
 }
 
 .zpet {
     text-decoration: none;
     font-size: 17px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 300;
     color: #006080;
     text-align: center;
