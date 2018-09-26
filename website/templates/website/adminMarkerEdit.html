@@ -9,10 +9,76 @@
 {% endblock %}
 
 {% block content_auth %}
-    <form action="/admin/marker/{{ id }}/edit" method="post">
-        {% csrf_token %}
-        {{ form }}
-        <input type="submit" value="Uložit">
+
+<div class="limiter">
+    <div class="login-container">
+        <div class="login-container-2">
+            <div class="login-title-form" style="background-image:url(/static/images/earthfromspace.jpg)">
+                <span class="login-title">
+                    {% if id == "new" %}
+                        Vytvořit nový bod
+                    {% else %}
+                        Upravit bod
+                    {% endif %}
+                </span>
+            </div>
+
+            <form action="/admin/marker/{{ id }}/edit" method="post">
+                {% csrf_token %}
+
+
+                <div class="input-form validate-input m-b-26">
+                    {{ form.name }}
+                    <span class="text-danger"></span>
+                    <!-- problem -->
+                    <span class="label-input">Místo</span>
+                </div>
+
+                <div class="input-form validate-input m-b-26" >
+                    {{ form.description }}
+                    <span class="text-danger"></span>
+                    <span class="label-input">Popis</span>
+                </div>
+
+                <div class="input-form validate-input m-b-26">
+                    {{ form.long }}
+                    <span class="text-danger"></span>
+                    <span class="label-input">Zeměpisná délka</span>
+                </div>
+
+                <div class="input-form validate-input m-b-26">
+                    {{ form.lat }}
+                    <span class="text-danger"></span>
+                    <span class="label-input">Zeměpisná šířka</span>
+                </div>
+
+                <div class="input-form validate-input m-b-26">
+                    {{ form.image }}
+                    <span class="text-danger"></span>
+                    <span class="label-input">Obrázek (725x482)</span>
+                </div>
+
+                <div class="input-form validate-input m-b-26">
+                    {{ form.fullImage }}
+                    <span class="text-danger"></span>
+                    <span class="label-input">Obrázek (4312x2868)</span>
+                </div>
+
+                <div class="input-form validate-input m-b-26">
+                    {{ form.infocard }}
+                    <span class="text-danger"></span>
+                    <span class="label-input">Infokarta</span>
+                </div>
+
+                <div class="flex-sb-m w-full p-b-30">
+                    <div class="container-login-form-btn">
+                        <button class="login-form-btn2" type="submit">
+                            Uložit
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     </form>
 {% endblock %}
-
