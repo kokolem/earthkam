@@ -142,13 +142,12 @@ html, body {
 .sidebar2 .zsbila-logo {
     width: 80px;
     height: auto;
-    margin-top: 175px;
 }
 
 .sidebar2 .earthkam-logo {
     width: 67px;
     height: auto;
-    margin-top: 175px;
+    margin-right: 10px;
 }
 
 /* End of Sidebar */
@@ -187,6 +186,16 @@ html, body {
     position: relative;
     min-height: 600px;
 }
+
+.login-container-3 {
+    width: 600px;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    min-height: 250px;
+}
+
 
 .login-title-form {
     width: 100%;
@@ -245,6 +254,14 @@ html, body {
     margin-left: 200px;
 }
 
+.input-form2 {
+    width: 50%;
+    position: relative;
+    border-bottom: 1px solid #b2b2b2;
+    margin-top: 40px;
+    margin-left: 200px;
+}
+
 .label-input {
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
@@ -267,7 +284,11 @@ html, body {
     width: 150%;
     display: block;
     background: transparent;
-    padding: 0 5px;
+    padding: 0 50px;
+}
+
+.text-danger {
+    width: 100%;
 }
 
 .focus-input {
@@ -763,9 +784,10 @@ button:hover {
 
 .table-control {
     margin-top: -65px;
-    margin-right: 20px;
+    margin-right: 50px;
     float: right;
     min-width: 60px;
+    max-width: 60px;
 }
 
 .table-control2 {
