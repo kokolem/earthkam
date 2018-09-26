@@ -250,7 +250,7 @@ html, body {
     width: 50%;
     position: relative;
     border-bottom: 1px solid #b2b2b2;
-    margin-top: 13px;
+    margin-top: 16px;
     margin-left: 200px;
 }
 
@@ -270,10 +270,25 @@ html, body {
     line-height: 1.2;
     text-align: right;
     position: absolute;
-    margin-left: -350px;
-    margin-top: 5px;
-    width: 120px;
-    float: left;
+    margin-left: -470px;
+    margin-top: 6px;
+    width: 150px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+  and (min-resolution:.001dpcm) {
+    .label-input{
+        font-family: 'Roboto', sans-serif;
+        font-size: 15px;
+        word-spacing: 2px;
+        color: #808080;
+        line-height: 1.2;
+        text-align: right;
+        position: absolute;
+        margin-left: -170px;
+        margin-top: -21px;
+        width: 150px;
+    }
 }
 
 .input {
@@ -281,7 +296,7 @@ html, body {
     font-size: 15px;
     color: #555555;
     line-height: 1.2;
-    width: 150%;
+    width: 100%;
     display: block;
     background: transparent;
     padding: 0 50px;
