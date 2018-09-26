@@ -259,7 +259,8 @@ html, body {
     position: relative;
     border-bottom: 1px solid #b2b2b2;
     margin-top: 40px;
-    margin-left: 200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .label-input {
@@ -273,6 +274,10 @@ html, body {
     margin-left: -470px;
     margin-top: 6px;
     width: 150px;
+}
+
+.label2 {
+    margin-top: -8px;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio:0)
