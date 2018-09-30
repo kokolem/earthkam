@@ -13,3 +13,4 @@
 8. Opravit posouvání Informace-Upravit-Smazat v /admin/markers
 9. Tlačítko "Větší zobrazení" dát u markerů bez infokarty doprostřed
 10. https://docs.google.com/document/d/19wj6Cd4DeiCpxrZIL-MRg7XDxoUSNiiHTSrFHGCrpqg/edit?usp=sharing
+11. Zmenšit zsbila-logo.jpg, aby se nenačítalo tak dlouho.
