@@ -35,7 +35,7 @@
                     infocard: "{{ marker.infocard }}"
                 });
                 google.maps.event.addListener(marker, 'click', function () {
-                    if (this.infocard != null) {
+                    if (this.infocard !== "") {
                         infowindow.setContent(
                             '<div id="mapCont"><img id="mapImg" src="' + this.img + '"/>' +
                             '<div id="mapTitle">' + this.title + '</div>' +
@@ -62,7 +62,8 @@
         <a href="http://earthkam.org" target="_blank"><h2 class="nadpis">EarthKAM</h2></a>
         <a href="/admin" class="index-odkaz">Přihlásit se</a>
         <a href="/o-projektu" class="index-odkaz2">O projektu</a>
-        <a href="http://www.zsbila.cz/1249-in-flight-call-with-paolo-nespoli" class="index-odkaz2" target="_blank">Volání
+        <a href="http://www.zsbila.cz/1248-volani-do-vesmiru-inflight-call-s-paolem-nespolim-astronautem-na-mezinarodni-vesmirne-stanici-iss-4-12-2017"
+           target="_blank" class="index-odkaz2">Volání
             do vesmíru</a>
     </div>
     <div class="map-box2">
@@ -75,6 +76,3 @@
         <div class="map" id="map"></div>
     </div>
 {% endblock %}
-
-
-

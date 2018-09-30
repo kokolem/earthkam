@@ -8,4 +8,4 @@ class Marker(models.Model):
     lat = models.DecimalField(decimal_places=2, max_digits=4, verbose_name="Zeměpisná šířka")
     image = models.URLField(verbose_name="URL adresa obrázku 752x482")
     fullImage = models.URLField(verbose_name="URL adresa obrázku 4312x2868")
-    infocard = models.URLField(verbose_name="URL adresa infokarty")
+    infocard = models.URLField(verbose_name="URL adresa infokarty", blank=True, default="")

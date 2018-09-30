@@ -21,6 +21,12 @@ def about(request):
     return render(request, 'website/about.html', {"markers_count": markers_count})
 
 
+def gmt(request):
+    # Stránka GMT
+
+    return render(request, 'website/gmt.html')
+
+
 @login_required
 def admin_marker_list(request):
     # Vypsané jednotlivé body
