@@ -1,0 +1,70 @@
+{% extends "website/base.html" %}
+
+{% block title %}
+    {% if id == "new" %}
+        Přidání bodu
+    {% else %}
+        Úprava bodu
+    {% endif %}
+{% endblock %}
+
+{% block head %}
+    <style>
+        {% for field in form %}
+            #id_{{ field.name }}{
+                width: 100%;
+            }
+        {% endfor %}
+    </style>
+{% endblock %}
+
+{% block content_auth %}
+
+    <div class="limiter">
+        <div class="login-container">
+            <div class="login-container-2">
+                <div class="login-title-form" style="background-image:url(/static/images/earthfromspace.jpg)">
+                <span class="login-title">
+                    {% if id == "new" %}
+                        Vytvořit nový bod
+                    {% else %}
+                        Upravit bod
+                    {% endif %}
+                </span>
+                </div>
+
+                <form action="/admin/marker/{{ id }}/edit" method="post">
+                    {% csrf_token %}
+
+                    {% for field in form %}
+                        <div class="input-form validate-input m-b-26">
+                            {{ field }}
+                            {% if form.errors %}
+                                {% for error in field.errors %}
+                                    <p class="error-message">
+                                        <span class="text-danger">{{ error|escape }}</span>
+                                    </p>
+                                {% endfor %}
+                            {% endif %}
+                            <span class="label-input">{{ field.label }}</span>
+                        </div>
+                    {% endfor %}
+
+                    <div class="flex-sb-m w-full p-b-30">
+                        <div class="container-login-form-btn">
+                            <button class="login-form-btn2" type="submit">
+                                Uložit
+                            </button>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    </form>
+{% endblock %}
+
+
+
+
+
+
