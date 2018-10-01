@@ -1,0 +1,51 @@
+{% extends "website/base.html" %}
+
+{% block title %}Informace o bodu{% endblock %}
+
+{% block content_auth %}
+    <h2 class="h3-actions">Informace</h2>
+    <div>
+        <hr/>
+        <dl class="dl-horizontal" id="delete">
+            <p class="info-text">Název:</p>
+            <dd class="dd-text">
+                {{ marker.name }}
+            </dd>
+            <hr/>
+            <p class="info-text">Zeměpisná šířka:</p>
+            <dd class="dd-text">
+                {{ marker.lat }}
+            </dd>
+            <hr/>
+            <p class="info-text">Zeměpisná délka:</p>
+            <dd class="dd-text">
+                {{ marker.long }}
+            </dd>
+            <hr/>
+            <p class="info-text">Popis:</p>
+            <dd class="dd-text">
+                {{ marker.description }}
+            </dd>
+            <hr/>
+            <p class="info-text">URL adresa obrázku 752x482:</p>
+            <dd class="dd-text">
+                <a href="{{ marker.image }}">{{ marker.image }}</a>
+            </dd>
+            <hr/>
+            <p class="info-text">URL adresa obrázku 4312x2868:</p>
+            <dd class="dd-text">
+                <a href="{{ marker.fullImage }}">{{ marker.fullImage }}</a>
+            </dd>
+            <hr/>
+            <p class="info-text">URL adresa infokarty:</p>
+            <dd class="dd-text">
+                <a href="{{ marker.infocard }}">{{ marker.infocard }}</a>
+            </dd>
+        </dl>
+    </div>
+    <div>
+        <a href="/admin/marker/{{ marker.pk }}/edit" class="forgot-link2">Upravit&nbsp;</a>
+        <a href="/admin/markers" class="forgot-link3">|&nbsp;Zpět na seznam</a>
+    </div>
+{% endblock %}
+
