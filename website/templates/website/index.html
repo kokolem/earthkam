@@ -26,6 +26,9 @@
             {% for marker in markers %}
                 myLatlng = new google.maps.LatLng({{marker.lat|unlocalize}}, {{marker.long|unlocalize}});
                 marker = new google.maps.Marker({
+                    {% if marker.infocard == "" %}
+                        icon: "/static/images/blue-marker.png",
+                    {% endif %}
                     position: myLatlng,
                     map: map,
                     title: "{{ marker.name }}",
