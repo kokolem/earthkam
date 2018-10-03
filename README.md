@@ -6,7 +6,6 @@
 
 ![Asi nějak takhle...](https://i.imgur.com/MZHFXku.png)
 
-5. Opravit posouvání Informace-Upravit-Smazat v /admin/markers
 6. Zmenšit zsbila-logo.jpg, aby se nenačítalo tak dlouho.
 7. Vymyslet a přidat favicon. (Časem možná něco s tou katedrou geoinformatiky.)
 8. Spojit style.css a style3.css.
