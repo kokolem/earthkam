@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/static/images/zsbila-logo.ico" type="image/x-icon">
 
     {% if user.is_authenticated %}
         <link rel="stylesheet" href="/static/css/style.css">
@@ -41,12 +42,19 @@
                         <a href="/o-projektu">O Projektu</a>
                     </li>
                     <li>
+                        <a href="/gmt">GMT</a>
+                    </li>
+                    <li>
+                        <a href="http://www.zsbila.cz/1248-volani-do-vesmiru-inflight-call-s-paolem-nespolim-astronautem-na-mezinarodni-vesmirne-stanici-iss-4-12-2017">Volání do vesmíru</a>
+                    </li>
+
+                    <li>
                         <a href="/admin/logout">Odhlásit se</a>
                     </li>
                 </ul>
-                <div align="center">
-                    <a href="http://www.zsbila.cz" target="_blank"><img class="zsbila-logo" src="/static/images/zsbila-logo.jpg"/></a>
-                    <a href="https://earthkam.org" target="_blank"><img class="earthkam-logo" src="/static/images/earthkam-logo.jpg"/></a>
+                <div align="center" style="margin-top: 50px;">
+                    <a href="http://www.zsbila.cz" target="_blank"><img class="zsbila-logo" src="/static/images/zsbila-logo.png"/></a>
+                    <a href="https://earthkam.org" target="_blank"><img class="earthkam-logo" src="/static/images/earthkam-logo2.png"/></a>
                 </div>
             </div>
         </div>
