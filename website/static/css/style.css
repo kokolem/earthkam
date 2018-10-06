@@ -7,6 +7,7 @@ html, body {
     word-spacing: 2px;
     font-family: 'Roboto', sans-serif;
 }
+
 /* Layout */
 
 /* Sidebar */
@@ -20,9 +21,9 @@ html, body {
     display: block;
     width: 255px;
     z-index: 1;
-    -webkit-box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.51);
-    -moz-box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.51);
-    box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.10);
+    -webkit-box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.51);
+    -moz-box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.51);
+    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.10);
 }
 
 .render-body {
@@ -177,7 +178,6 @@ html, body {
     background: #ebeeef;
 }
 
-
 .login-container-2 {
     width: 600px;
     background: #fff;
@@ -195,7 +195,6 @@ html, body {
     position: relative;
     min-height: 250px;
 }
-
 
 .login-title-form {
     width: 100%;
@@ -280,9 +279,9 @@ html, body {
     margin-top: -8px;
 }
 
-@media screen and (-webkit-min-device-pixel-ratio:0)
-  and (min-resolution:.001dpcm) {
-    .label-input{
+@media screen and (-webkit-min-device-pixel-ratio: 0)
+and (min-resolution: .001dpcm) {
+    .label-input {
         font-family: 'Roboto', sans-serif;
         font-size: 15px;
         word-spacing: 2px;
@@ -350,7 +349,6 @@ html, body {
 input.input {
     height: 45px;
 }
-
 
 .input:focus + .focus-input::before {
     width: 100%;
@@ -531,7 +529,7 @@ label {
     font-weight: 300;
     color: #20323b;
     margin-left: 210px;
-    float:left;
+    float: left;
 }
 
 .forgot-link2 {
@@ -703,7 +701,6 @@ button:hover {
 
 /*End of Login Form*/
 
-
 /* Table */
 
 .table-out {
@@ -712,9 +709,9 @@ button:hover {
     margin-left: auto;
     margin-right: auto;
     background-color: #fff;
-    -webkit-box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.51);
-    -moz-box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.51);
-    box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.10);
+    -webkit-box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.51);
+    -moz-box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.51);
+    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.10);
     margin-top: 75px;
     min-width: 755px;
 }
@@ -836,14 +833,15 @@ button:hover {
 
 /* End of Table */
 
-
 /* Map */
 
 .topmenu {
     width: 100%;
     height: 55px;
     background-color: #fff;
-    z-index:1;
+    z-index: 1;
+    -webkit-box-shadow: 0 7px 30px 0 rgba(0, 0, 0, 0.32);
+    box-shadow: 0 7px 30px 0 rgba(0, 0, 0, 0.32);
 }
 
 .index-odkaz {
@@ -1039,12 +1037,11 @@ button:hover {
 
 /* Media rules */
 
-
 /* End of Media rules */
 
 .h3-actions {
     font-size: 22px;
-    text-align:center;
+    text-align: center;
     margin-top: 15px;
 }
 
@@ -1122,6 +1119,7 @@ button:hover {
     margin-left: auto;
     margin-right: auto;
 }
+
 .img-gmt {
     width: 100%;
 }
@@ -1134,7 +1132,6 @@ button:hover {
     color: #20323b;
     text-align: center;
 }
-
 
 .zsbila-logo2 {
     width: 120px;
