@@ -140,14 +140,14 @@ html, body {
 }
 
 .sidebar2 .zsbila-logo {
-    width: 80px;
+    width: 67px;
     height: auto;
 }
 
 .sidebar2 .earthkam-logo {
-    width: 67px;
+    width: 79px;
     height: auto;
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
 /* End of Sidebar */
@@ -307,8 +307,19 @@ html, body {
     padding: 0 50px;
 }
 
-.text-danger {
+#id_username {
     width: 100%;
+    text-align: center;
+}
+
+#id_password {
+    width: 100%;
+    text-align: center;
+}
+
+.text-danger {
+    text-align: center;
+    margin-top: 10px;
 }
 
 .focus-input {
@@ -705,7 +716,7 @@ button:hover {
     -moz-box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.51);
     box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.10);
     margin-top: 75px;
-    min-width: 500px;
+    min-width: 755px;
 }
 
 .table-header {
@@ -739,7 +750,7 @@ button:hover {
     width: 100%;
     height: 115px;
     border-bottom: 1px solid #bfbfbf;
-    min-width: 500px;
+    min-width: 755px;
 }
 
 .table-img-1 {
@@ -982,6 +993,34 @@ button:hover {
     border-radius: 2px;
 }
 
+#button-zde3 {
+    font-family: 'Poppins', sans-serif;
+    color: #006080;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 300;
+    margin-left: 13px;
+    margin-top: 5px;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    border: 1px solid #006080;
+    border-radius: 2px;
+    display: inline-block;
+}
+
+#button-zde3-container {
+    text-align: center;
+}
+
+#button-zde3:hover {
+    color: #fff;
+    background-color: #006080;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
 #button-zde:hover {
     color: #fff;
     background-color: #006080;
@@ -1000,9 +1039,6 @@ button:hover {
 
 /* Media rules */
 
-@media only screen and (max-width: 1400px) {
-
-}
 
 /* End of Media rules */
 
@@ -1017,4 +1053,131 @@ button:hover {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     margin-bottom: 0px;
+}
+
+/* o projektu a gmt */
+
+.popis {
+    text-decoration: none;
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #20323b;
+    text-align: center;
+    word-spacing: 2px;
+    line-height: 30px;
+}
+
+.popis2 {
+    text-decoration: none;
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #20323b;
+    text-align: center;
+    word-spacing: 2px;
+    line-height: 25px;
+}
+
+.popis3 {
+    text-decoration: none;
+    font-size: 32px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #20323b;
+    text-align: center;
+    word-spacing: 2px;
+    line-height: 30px;
+    text-transform: uppercase;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+.popis-gmt {
+    text-decoration: none;
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #20323b;
+    word-spacing: 2px;
+    line-height: 30px;
+}
+
+.nadpis-gmt {
+    text-decoration: none;
+    font-size: 28px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #20323b;
+    text-align: center;
+    word-spacing: 2px;
+    line-height: 30px;
+    text-transform: uppercase;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+.content-block {
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.img-gmt {
+    width: 100%;
+}
+
+.autori {
+    text-decoration: none;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #20323b;
+    text-align: center;
+}
+
+
+.zsbila-logo2 {
+    width: 120px;
+    height: 120px;
+    float: left;
+    margin-left: 25px;
+}
+
+.earthkam-logo {
+    width: 140px;
+    height: 120px;
+    float: right;
+    margin-right: 25px;
+}
+
+.nadpis-loga {
+    width: 1050px;
+}
+
+.gmt-oprojektu-content {
+    width: 1050px;
+    margin: auto;
+}
+
+.zpet {
+    text-decoration: none;
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #006080;
+    text-align: center;
+    word-spacing: 2px;
+    border: 2px solid #006080;
+    padding: 9px 30px;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    border-radius: 2px;
+    margin-bottom: 50px;
+}
+
+.zpet:hover {
+    color: #fff;
+    background-color: #006080;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
 }
