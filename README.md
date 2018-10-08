@@ -1,6 +1,6 @@
 # TODO:
 
-1. Udělat hlavní stránku responsivní. \\/ Nějak takhle. \\/
+1. Udělat vše, co vidí nepřihlášení responsivní. Hlavní stránku nějak takhle:
 
 ![Asi nějak takhle...](https://i.imgur.com/MZHFXku.png)
 
