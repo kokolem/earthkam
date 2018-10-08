@@ -10,7 +10,7 @@
     {% load l10n %}
     <script>
         function initMap() {
-            let mapOptions = {
+            const mapOptions = {
                 center: new google.maps.LatLng(0, 0),
                 zoom: 2,
                 mapTypeControl: false,
@@ -18,41 +18,39 @@
                 zoomControl: true,
                 fullscreenControl: false
             };
-            let map = new google.maps.Map(document.getElementById("map"), mapOptions);
-            let infowindow = new google.maps.InfoWindow({
-                content: " "
-            });
-            let myLatlng, marker;
+            const map = new google.maps.Map(document.getElementById("map"), mapOptions);
+            let lastinfo = false;
             {% for marker in markers %}
-                myLatlng = new google.maps.LatLng({{marker.lat|unlocalize}}, {{marker.long|unlocalize}});
-                marker = new google.maps.Marker({
+                const content{{ marker.pk }} =
+                    '<div id="mapCont"><img id="mapImg" src="{{ marker.image }}"/>' +
+                    '<div id="mapTitle">{{ marker.name }}</div>' +
+                    '<div id="mapDescription">{{ marker.description }}</div>' +
+                    {% if marker.infocard != "" %}
+                        '<a href="{{ marker.fullImage }}" id="button-zde" target="_blank">Větší zobrazení</a>' +
+                        '<a href="{{ marker.infocard }}" id="button-zde2" target="_blank">Bližší informace</a></div>';
+                    {% else %}
+                        '<div id="button-zde3-container"><a href="{{ marker.fullImage }}" id="button-zde3" target="_blank" align="center">Větší zobrazení</a></div></div>';
+                    {% endif %}
+                const infowindow{{ marker.pk }} = new google.maps.InfoWindow();
+                infowindow{{ marker.pk }}.setContent(content{{ marker.pk }});
+                const marker{{ marker.pk }} = new google.maps.Marker({
+
                     {% if marker.infocard == "" %}
                         icon: "/static/images/blue-marker.png",
+                        shape: {type: "poly", coords: [13.5, 0, 4, 3.75, 0, 13.5, 13.5, 43, 27, 13.5, 23, 3.75]},
                     {% endif %}
-                    position: myLatlng,
+
+                    position: new google.maps.LatLng({{marker.lat|unlocalize}}, {{marker.long|unlocalize}}),
                     map: map,
+
                     title: "{{ marker.name }}",
-                    img: "{{ marker.image }}",
-                    fullImg: "{{ marker.fullImage }}",
-                    description: "{{ marker.description }}",
-                    infocard: "{{ marker.infocard }}"
                 });
-                google.maps.event.addListener(marker, 'click', function () {
-                    if (this.infocard !== "") {
-                        infowindow.setContent(
-                            '<div id="mapCont"><img id="mapImg" src="' + this.img + '"/>' +
-                            '<div id="mapTitle">' + this.title + '</div>' +
-                            '<div id="mapDescription">' + this.description + '</div>' +
-                            '<a href="' + this.fullImg + '" id="button-zde" target="_blank">Větší zobrazení</a>' +
-                            '<a href="' + this.infocard + '" id="button-zde2" target="_blank">Bližší informace</a></div>');
-                    } else {
-                        infowindow.setContent(
-                            '<div id="mapCont"><img id="mapImg" src="' + this.img + '"/>' +
-                            '<div id="mapTitle">' + this.title + '</div>' +
-                            '<div id="mapDescription">' + this.description + '</div>' +
-                            '<div id="button-zde3-container"><a href="' + this.fullImg + '" id="button-zde3" target="_blank" align="center">Větší zobrazení</a></div></div>');
+                google.maps.event.addListener(marker{{ marker.pk }}, 'click', function () {
+                    if (lastinfo){
+                        lastinfo.close()
                     }
-                    infowindow.open(map, this);
+                    lastinfo = infowindow{{ marker.pk }};
+                    infowindow{{ marker.pk }}.open(map, this);
                 });
             {% endfor %}
         }
