@@ -842,6 +842,7 @@ button:hover {
     z-index: 1;
     -webkit-box-shadow: 0 7px 30px 0 rgba(0, 0, 0, 0.32);
     box-shadow: 0 7px 30px 0 rgba(0, 0, 0, 0.32);
+    position: relative;
 }
 
 .index-odkaz {
@@ -1178,3 +1179,90 @@ button:hover {
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
 }
+
+.hamburger-container {
+
+}
+
+.bar1, .bar2, .bar3 {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-7px, 5px);
+    transform: rotate(-45deg) translate(-7px, 5px);
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+    opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-7px, -7px);
+    transform: rotate(45deg) translate(-7px, -7px);
+}
+
+.hamburger-container {
+    display: none;
+}
+
+@media screen and (max-width: 700px) {
+    .topmenu a.index-odkaz {
+        display: none;
+    }
+
+    .topmenu a.index-odkaz2 {
+        display: none;
+    }
+
+    .topmenu.responsive div.link-container {
+        padding-top: 55px;
+    }
+
+    .topmenu.responsive a.index-odkaz {
+        background-color: white;
+        border-bottom: 1px solid grey;
+        margin: 0;
+        padding: 5px 135px 5px 5px;
+        text-align: center;
+        float: none;
+        display: block;
+    }
+
+    .topmenu.responsive a.index-odkaz2 {
+        border-bottom: 1px solid grey;
+        background-color: white;
+        padding: 5px;
+        margin: 0;
+        text-align: center;
+        float: none;
+        display: block;
+    }
+
+    #lastLink {
+        border-bottom: none;
+        -webkit-box-shadow: 0 7px 17px 0 rgba(0, 0, 0, 0.27);
+        box-shadow: 0 7px 17px 0 rgba(0, 0, 0, 0.27);
+    }
+
+    .topmenu.responsive {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+    .hamburger-container {
+        display: inline-block;
+        float: right;
+        cursor: pointer;
+        padding: 11px 12px;
+        margin-right: 5px;
+    }
+}
+

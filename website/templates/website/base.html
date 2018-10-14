@@ -17,6 +17,20 @@
         <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
               rel="stylesheet">
+    {% else %}
+        <script>
+            let topmenu;
+
+            function responsive(icon) {
+                icon.classList.toggle("change");
+                topmenu = document.getElementById("topnav");
+                if (topmenu.className === "topmenu") {
+                    topmenu.className += " responsive";
+                } else {
+                    topmenu.className = "topmenu";
+                }
+            }
+        </script>
     {% endif %}
 
     {% block head %}{% endblock %}
@@ -67,14 +81,21 @@
         {% block content_auth %} {% endblock %}
     </div>
 {% else %}
-    <div class="topmenu">
+    <div class="topmenu" id="topnav">
         <a href="http://earthkam.org" target="_blank"><h2 class="nadpis">EarthKAM</h2></a>
-        <a href="/" class="index-odkaz">Mapa</a>
-        <a href="/o-projektu" class="index-odkaz2">O projektu</a>
-        <a href="/gmt" class="index-odkaz2">GMT</a>
-        <a href="http://www.zsbila.cz/1248-volani-do-vesmiru-inflight-call-s-paolem-nespolim-astronautem-na-mezinarodni-vesmirne-stanici-iss-4-12-2017"
-           target="_blank" class="index-odkaz2">Volání do vesmíru</a>
-        <a href="/admin" class="index-odkaz2">Přihlásit se</a>
+        <div class="hamburger-container" onclick="responsive(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <div class="link-container">
+            <a href="/" class="index-odkaz">Mapa</a>
+            <a href="/o-projektu" class="index-odkaz2">O projektu</a>
+            <a href="/gmt" class="index-odkaz2">GMT</a>
+            <a href="http://www.zsbila.cz/1248-volani-do-vesmiru-inflight-call-s-paolem-nespolim-astronautem-na-mezinarodni-vesmirne-stanici-iss-4-12-2017"
+               target="_blank" class="index-odkaz2">Volání do vesmíru</a>
+            <a href="/admin" class="index-odkaz2" id="lastLink">Přihlásit se</a>
+        </div>
     </div>
     {% block content_unauth %} {% endblock %}
 {% endif %}
