@@ -26,8 +26,10 @@
                     '<div id="mapTitle">{{ marker.name }}</div>' +
                     '<div id="mapDescription">{{ marker.description }}</div>' +
                     {% if marker.infocard != "" %}
-                        '<a href="{{ marker.fullImage }}" id="button-zde" target="_blank">Větší zobrazení</a>' +
-                        '<a href="{{ marker.infocard }}" id="button-zde2" target="_blank">Bližší informace</a></div>';
+                        '<div id="button-zde-container">'+
+                        '<a href="{{ marker.fullImage }}" id="button-zde" target="_blank">Větší zobrazení</a></div>' +
+                        '<div id="button-zde-container"><a href="{{ marker.infocard }}" id="button-zde2" target="_blank">Bližší informace</a>'+
+                        '</div>';
                     {% else %}
                         '<div id="button-zde3-container"><a href="{{ marker.fullImage }}" id="button-zde3" target="_blank" align="center">Větší zobrazení</a></div></div>';
                     {% endif %}
@@ -36,7 +38,7 @@
                 const marker{{ marker.pk }} = new google.maps.Marker({
 
                     {% if marker.infocard == "" %}
-                        icon: "/static/images/blue-marker.png",
+                        icon: new google.maps.MarkerImage('/static/images/blue-marker.png', null, null, null, new google.maps.Size(28,45)),
                         shape: {type: "poly", coords: [13.5, 0, 4, 3.75, 0, 13.5, 13.5, 43, 27, 13.5, 23, 3.75]},
                     {% endif %}
 
@@ -60,6 +62,7 @@
 {% endblock %}
 
 {% block content_unauth %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <div class="map-box2">
         <div class="map" id="map"></div>
     </div>
