@@ -82,11 +82,9 @@ def admin_marker_delete(request, id):
 def admin(request):
     # Stránka pro přihlášení
 
-    map_markers = Marker.objects.all()
     return HttpResponseRedirect("/")
 
 
-@login_required
 def admin_logout(request):
     # Stránka na odhlašování
 
