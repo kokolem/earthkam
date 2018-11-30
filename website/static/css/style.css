@@ -760,20 +760,26 @@ button:hover {
     width: auto;
     height: 75px;
     margin-top: 15px
+}
 
+.table-img-pointer {
+    height: 30px;
+    width: 18px;
+    margin-top: -85px;
+    margin-left: 110px;
 }
 
 .table-text-1 {
-    width: 200px;
-    margin-left: 160px;
+    width: 230px;
+    margin-left: 150px;
     border-right: 1px solid #bfbfbf;
-    margin-top: -70px;
-    min-width: 200px;
+    margin-top: -100px;
+    min-width: 230px;
 }
 
 .table-text-2 {
     width: 200px;
-    margin-left: 375px;
+    margin-left: 400px;
     margin-top: -55px;
     min-width: 250px;
 }
@@ -973,6 +979,7 @@ button:hover {
     transition-duration: 0.3s;
     border: 1px solid #006080;
     border-radius: 2px;
+
 }
 
 #button-zde2 {
@@ -990,6 +997,7 @@ button:hover {
     transition-duration: 0.3s;
     border: 1px solid #006080;
     border-radius: 2px;
+
 }
 
 #button-zde3 {
@@ -1214,6 +1222,7 @@ button:hover {
 }
 
 @media screen and (max-width: 700px) {
+
     .topmenu a.index-odkaz {
         display: none;
     }
@@ -1262,7 +1271,58 @@ button:hover {
         float: right;
         cursor: pointer;
         padding: 11px 12px;
-        margin-right: 5px;
     }
 }
+
+@media screen and (max-width: 450px) {
+    #button-zde-container {
+        text-align: center;
+    }
+
+    #button-zde, #button-zde2 {
+        font-family: 'Poppins', sans-serif;
+        color: #006080;
+        padding: 5px 10px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 300;
+        margin-left: 13px;
+        margin-top: 5px;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        border: 1px solid #006080;
+        border-radius: 2px;
+        display: inline-block;
+        float: none;
+    }
+
+    #button-zde2 {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+
+    .popis3 {
+        margin-top: 35px;
+    }
+
+    .loga {
+        display: none;
+    }
+
+    .gmt-oprojektu-content {
+        width: 100%;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 484px) {
+    .eu {
+        width: 100%;
+        height: auto;
+    }
+}
+
 
