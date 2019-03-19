@@ -6,6 +6,7 @@ urlpatterns = [
     path('', views.index, name="hlavní-stránka"),
     path('o-projektu/', views.about, name="o-projektu"),
     path('gmt/', views.gmt, name="čas-gmt"),
+    path('space-camp/', views.space_camp, name="space-camp"),
     path('admin/', views.admin, name="přihlášení"),
     path('admin/logout', views.admin_logout, name="odhlášení"),
     path('admin/markers', views.admin_marker_list, name="seznam-bodů"),

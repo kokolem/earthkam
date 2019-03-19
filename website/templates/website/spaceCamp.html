@@ -1,0 +1,71 @@
+{% extends "website/base.html" %}
+
+{% block title %}Space Camp 2019{% endblock %}
+{% block head %}
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700" rel="stylesheet">
+    <link rel="icon" href="static/images/zsbila-favicon.ico" type="image/x-icon"/>
+{% endblock %}
+
+{% block content_unauth %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% block content_auth %}
+        <div class="gmt-oprojektu-content">
+            <div class="loga">
+                <a href="http://www.zsbila.cz" target="_blank"><img class="zsbila-logo2"
+                                                                    src="/static/images/zsbila-logo.png"/></a>
+                <a href="https://www.spacecampturkey.com/eng/" target="_blank"><img class="earthkam-logo"
+                                                                                    src="/static/images/space-camp-logo.png"/></a>
+            </div>
+            <p class="popis3">Space Camp 2019</p>
+            <p class="popis">
+                Obdrželi jsme stipendium pro 12 dětí ve <br>
+                věku 12-15 let pro účast na mezinárodním táboře v tureckém Izmiru. <br>
+                Stipendium kryje veškeré náklady na vlastní pobyt, tedy ubytování, stravu, <br>
+                práci pedagogického dozoru, lokální dopravu a další materiální zabezpečení. <br>
+                Účastníci hradí pouze náklady na leteckou dopravu a cestovní <br>
+                pojištění. V minulém roce však byla doprava plně hrazena z grantu Magistrátu hl. m. Prahy, <br>
+                věříme, že i v letošním roce se podaří alespoň příspěvek na dopravu prostřednictvím grantu získat. <br>
+                <br>
+                Obracíme se s touto informací na ředitele a učitele základních škol, pracovníky organizací <br>
+                zabývajících se volnočasovými aktivitami dětí a mládeže, pracovníky obecních úřadů a úřadů <br>
+                městských částí a prosíme o pomoc v předání informací dětem splňujícím následující kritéria: <br>
+                <br>
+
+            <p class="popis" style="text-align: left; margin-left: 15%">
+                ● věk 12-15 let (datum narození červen 2004 až červen 2007, <br>
+                ● schopnost dorozumět se v anglickém jazyce <br>
+                ● zájem o vesmír a kosmonautiku <br>
+                ● přátelská povaha a chuť poznat nové přátele z různých zemí Evropy <br>
+            </p>
+
+            <p class="popis">
+                <br>
+                V případě zájmu vyzýváme děti a jejich rodiče, aby nám co nejdříve napsali na adresu <br>
+                <a href="mailto:spaceclub@ssps.cz">spaceclub@ssps.cz</a>, zašleme podrobnější údaje, zodpovíme dotazy,
+                připravíme a pozveme <br>
+                na výběrové řízení. <br>
+                <br>
+                Turecký Space Camp, jako jeden ze tří světových Space Campů, se nachází v centru bezcelní <br>
+                průmyslové zóny Esbaş na okraji starobylého města Izmir. Do kempu jsou účastníci přepraveni <br>
+                autobusem z letiště. Celý rozlehlý areál (2.2 mil. km2) je čistým a bezpečným místem, v kterém <br>
+                působí více než 170 společností. O účastníky tábora velmi pečlivě a zodpovědně dbá množství <br>
+                mladých pracovníků (oddílových vedoucích či obsluhy jednotlivých “atrakcí”). Strava je rozmanitá a <br>
+                chutná. Kromě bohatého tematického programu (různé simulátory, stavba modelů raket, robotů, <br>
+                vzdělávacích seminářů) nechybí sportovní a kulturní vyžití (společenský večer, kde každá skupina <br>
+                z nějakého národa předvádí svůj program, BBQ párty, diskotéka). Spolu s poznáním o vesmíru a <br>
+                kosmonautice tak přináší tábor svým mladým účastníkům možnost komunikovat v anglickém <br>
+                jazyce, navázat mezinárodní přátelství a multikulturně rozvíjet svou osobnost. <br>
+                <br>
+                <b>Další informace:</b>
+                <a href="/static/files/space-camp-2018.pdf" target="_blank">Článek o Space Campu 2018 (PDF)</a>
+                <a href="https://www.youtube.com/watch?v=Xvm296umiqo" target="_blank">Video o Space Campu</a>
+                <a href="https://www.spacecampturkey.com/eng/" target="_blank">Oficiální stránky Space Campu</a>
+                <a href=""></a>
+            </p>
+        </div>
+        <br/>
+
+    {% endblock %}
+{% endblock %}

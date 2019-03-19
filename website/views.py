@@ -27,6 +27,12 @@ def gmt(request):
     return render(request, 'website/gmt.html')
 
 
+def space_camp(request):
+    # Stránka Space Camp
+
+    return render(request, 'website/spaceCamp.html')
+
+
 @login_required
 def admin_marker_list(request):
     # Vypsané jednotlivé body
